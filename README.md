@@ -6,27 +6,11 @@ A trainsition-based dependency parser
 
 A constituency parse tree breaks a text into sub-phrases. Non-terminals in the tree are types of phrases, the terminals are the words in the 
 sentence, and the edges are unlabeled. For a simple sentence "John sees Bill", a constituency parse would be: </br>
-
-                  Sentence </br>
-                     | </br>
-       +-------------+------------+ </br>
-       |                          | </br>
-  Noun Phrase                Verb Phrase </br>
-       |                          | </br>
-     John                 +-------+--------+ </br>
-                          |                | </br>
-                        Verb          Noun Phrase </br>
-                          |                | </br>
-                        sees              Bill </br>
+![constituency](constituency.png) </br>
 A dependency parse connects words according to their relationships. Each vertex in the tree represents a word, child nodes are words that are 
 dependent on the parent, and edges are labeled by the relationship. A dependency parse of "John sees Bill", would be: </br>
-
-              sees </br>
-                | </br>
-        +--------------+ </br>
-subject |              | object </br>
-        |              | </br>
-      John            Bill </br>
+![dependency](dependency.png) </br>
+	  
 You should use the parser type that gets you closest to your goal. If you are interested in sub-phrases within the sentence, you probably want 
 the constituency parse. If you are interested in the dependency relationships between words, then you probably want the dependency parse. </br>
 
